@@ -100,11 +100,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Show custom error page
         @Override
-        public void onReceivedError(WebView view, int errorCode,
-                                    String description, String failingUrl) {
-            myurl = view.getUrl();
-            setContentView(R.layout.error);
-            super.onReceivedError(view, errorCode, description, failingUrl);
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            if (webview!=null) {
+                hideErrorPage(view);
+            }
+        }
+
+        private void hideErrorPage(WebView view) {
+            // Here we configurating our custom error page
+            // It will be blank
+            String customErrorPageHtml = "<html><h1>Error</h1></html>";
+            view.loadData(customErrorPageHtml, "text/html", null);
         }
 
 
@@ -166,4 +172,3 @@ public class MainActivity extends AppCompatActivity {
         webview.loadUrl(myurl);
     }
 }
-
