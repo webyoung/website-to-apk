@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         private void hideErrorPage(WebView view) {
             // Here we configurating our custom error page
             // It will be blank
-            String customErrorPageHtml = "<!DOCTYPE HTML><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><style>@font-face {font-family: system;font-style: normal;src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-light"), local("DroidSans"), local("Tahoma");}*{font-family: system;background-color: #000000;}.eHead {text-align: center;color: white;}.eText {text-align: center;color: white;}</style></head><body><div class="container"><h1 class="eHead">No Internet :(</h1><p class="eText">please check your internet connection and try again</p></div></body>";
+            String customErrorPageHtml = "<h1>No Internet</h1>";
             view.loadData(customErrorPageHtml, "text/html", null);
         }
 
