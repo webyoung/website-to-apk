@@ -1,8 +1,5 @@
-name: Build with Gradle (Android CI)
-
-on:
-  workflow_dispatch:
-
+name: apk
+on: push
 jobs:
   Run:
 
