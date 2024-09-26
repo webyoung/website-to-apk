@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     String ShowOrHideWebViewInitialUse = "show";
     private WebView webview ;
     private ProgressBar spinner;
-    String myurl = "https://instagram.com/"; //Change this  to your website hostname
+    String myurl = "https://www.tinasky.com/"; //Change this  to your website hostname
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
